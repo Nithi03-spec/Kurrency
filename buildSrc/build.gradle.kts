@@ -1,18 +1,4 @@
-/*
- * Copyright (C) 2020. Nuh Koca. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 plugins {
     `kotlin-dsl`
     `kotlin-dsl-precompiled-script-plugins`
@@ -26,13 +12,23 @@ repositories {
 }
 
 object PluginVersions {
-    const val gradle_plugin = "4.1.3"
-    const val kotlin_gradle_plugin = "1.4.32"
-    const val gradle_version_plugin = "0.38.0"
-    const val detekt = "1.16.0"
-    const val ktlint = "9.2.1"
-    const val spotless = "5.12.4"
+    const val gradle_plugin = "8.1.1"
+    const val kotlin_gradle_plugin = "1.9.23"
+    const val gradle_version_plugin = "0.42.0"
+    const val detekt = "1.23.0"
+    const val ktlint = "11.4.2"
+    const val spotless = "6.20.0"
     const val junit5 = "1.7.1.1"
+}
+
+// Set JVM target for buildSrc to match project
+kotlin {
+    jvmToolchain(17)
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 dependencies {

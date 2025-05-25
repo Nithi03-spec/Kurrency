@@ -1,26 +1,18 @@
-/*
- * Copyright (C) 2020. Nuh Koca. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-import dependencies.Dependencies
 
 plugins {
     `java-library`
     kotlin
 }
 
+// Configure JVM target to match the rest of the project
+kotlin {
+    jvmToolchain(17)
+}
+
 java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+
     sourceSets {
         getByName("main") {
             java.srcDir("src/main/kotlin")
@@ -31,17 +23,28 @@ java {
     }
 }
 
-dependencies {
-    compileOnly(Dependencies.Lint.lint)
-    compileOnly(Dependencies.Lint.api)
-    compileOnly(Dependencies.Lint.checks)
-    compileOnly(Dependencies.Lint.tests)
+// Ensure Kotlin compilation uses JVM target 17
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+    kotlinOptions {
+        jvmTarget = "17"
+        freeCompilerArgs += listOf("-opt-in=kotlin.RequiresOptIn")
+        // Remove deprecated flags
+    }
+}
 
-    testImplementation(Dependencies.Lint.tests)
+dependencies {
+    // Use consistent lint API versions - remove duplicates
+    compileOnly("com.android.tools.lint:lint-api:31.1.1")
+    compileOnly("com.android.tools.lint:lint-checks:31.1.1")
+
+    // Test dependencies - IMPORTANT: Add lint core dependency
+    testImplementation("com.android.tools.lint:lint:31.1.1")
+    testImplementation("com.android.tools.lint:lint-tests:31.1.1")
+    testImplementation("junit:junit:4.13.2")
 }
 
 val jar by tasks.getting(Jar::class) {
     manifest {
-        attributes["Lint-Registry-v2"] = "io.github.nuhkoca.rules.IssueRegistry"
+        attributes["Lint-Registry-v2"] = "io.github.nithi.rules.IssueRegistry"
     }
 }

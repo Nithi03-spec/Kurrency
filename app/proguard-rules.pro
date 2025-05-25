@@ -69,11 +69,11 @@
 -dontwarn okio.**
 
 -dontnote kotlinx.serialization.SerializationKt
--keep,includedescriptorclasses class io.github.nuhkoca.libbra.**$$serializer { *; }
--keepclassmembers class io.github.nuhkoca.libbra.** {
+-keep,includedescriptorclasses class io.github.nithi.kurrency.**$$serializer { *; }
+-keepclassmembers class io.github.nithi.kurrency.** {
     *** Companion;
 }
--keepclasseswithmembers class io.github.nuhkoca.libbra.** {
+-keepclasseswithmembers class io.github.nithi.kurrency.** {
     kotlinx.serialization.KSerializer serializer(...);
 }
 

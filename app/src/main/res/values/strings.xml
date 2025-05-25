@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Libbra</string>
+    <string name="app_name">Kurrency</string>
 
     <string name="error_message_text">Sorry, we\'re failed!</string>
     <string name="currency_text_digits">0123456789,.</string>

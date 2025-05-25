@@ -15,7 +15,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment"
-        android:name="io.github.nuhkoca.libbra.ui.NavHostFragment"
+        android:name="io.github.nithi.kurrency.ui.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="@dimen/spacing_none"
         app:defaultNavHost="true"

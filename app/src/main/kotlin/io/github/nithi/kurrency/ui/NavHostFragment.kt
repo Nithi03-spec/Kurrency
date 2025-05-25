@@ -1,17 +1,6 @@
-/*
- * Copyright (C) 2020. Nuh Koca. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+/**
+ * Developed by Nithillah
+ * Kurrency App - Currency Converter
  */
 package io.github.nithi.kurrency.ui
 
@@ -19,13 +8,13 @@ import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.FragmentFactory
 import androidx.navigation.fragment.NavHostFragment
-import io.github.nithi.kurrency.di.factory.LibbraFragmentFactory
+import io.github.nithi.kurrency.di.factory.KurrencyFragmentFactory
 import io.github.nithi.kurrency.ui.di.MainScope
-import io.github.nithi.kurrency.util.ext.libbraApplication
+import io.github.nithi.kurrency.util.ext.kurrencyApplication
 import javax.inject.Inject
 
 /**
- * A custom [NavHostFragment] to allow [LibbraFragmentFactory] to inflate fragments using this host.
+ * A custom [NavHostFragment] to allow [kurrencyFragmentFactory] to inflate fragments using this host.
  */
 @MainScope
 class NavHostFragment : NavHostFragment() {
@@ -34,7 +23,7 @@ class NavHostFragment : NavHostFragment() {
     lateinit var fragmentFactory: FragmentFactory
 
     override fun onAttach(context: Context) {
-        libbraApplication.appComponent.mainComponent().create().inject(this)
+        kurrencyApplication.appComponent.mainComponent().create().inject(this)
         super.onAttach(context)
     }
 

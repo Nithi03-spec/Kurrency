@@ -29,7 +29,7 @@ object Stubs {
 
     val CUSTOM_LOG_IMPL_KOTLIN: TestFile = kotlin(
         """
-                package io.github.nuhkoca.libbra.util.ext
+                package io.github.nithi.kurrency.util.ext
 
                 inline fun d(crossinline message: () -> String) = log { Timber.d(message()) }
         """.trimIndent()

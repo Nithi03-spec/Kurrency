@@ -21,7 +21,7 @@ import kotlin.reflect.KClass
  * FragmentFactory which uses Dagger to create the instances.
  */
 @Suppress("TooGenericExceptionCaught", "TooGenericExceptionThrown")
-class kurrencyFragmentFactory @Inject constructor(
+class KurrencyFragmentFactory @Inject constructor(
     private val creators: Map<Class<out Fragment>, @JvmSuppressWildcards Provider<Fragment>>
 ) : FragmentFactory() {
 
@@ -43,7 +43,7 @@ internal abstract class FragmentBindingsModule {
 
     @Binds
     internal abstract fun bindFragmentFactory(
-        fragmentFactory: kurrencyFragmentFactory
+        fragmentFactory: KurrencyFragmentFactory
     ): FragmentFactory
 }
 

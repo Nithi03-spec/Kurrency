@@ -18,7 +18,7 @@ import timber.log.Timber.DebugTree
  *
  * Also, sets up Timber in the DEBUG BuildConfig.
  */
-class kurrencyApplication : Application() {
+class KurrencyApplication : Application() {
 
     private val processLifecycleOwner = ProcessLifecycleOwner.get()
 
