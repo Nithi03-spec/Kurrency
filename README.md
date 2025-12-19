@@ -29,19 +29,15 @@ It demonstrates modern Android development practices including MVVM architecture
 
 \## Tech Stack
 
-\- \*\*Language:\*\* Kotlin  
+\- Language: Kotlin  
 
-\- \*\*Architecture:\*\* MVVM  
+\- Architecture: MVVM  
 
-\- \*\*UI:\*\* Jetpack Compose / XML  
+\- UI: Jetpack Compose / XML  
 
-\- \*\*Networking:\*\* Retrofit  
+\- Networking: Retrofit  
 
-\- \*\*Serialization:\*\* Kotlinx Serialization  
-
-\- \*\*Dependency Injection:\*\* Custom DI modules  
-
-\- \*\*Database:\*\* (If any, e.g., Room)  
+\- Serialization: Kotlinx Serialization  
 
 
 
@@ -93,4 +89,5 @@ Kurrency
 
 
 ##Author
+
 -Nithillah Balaji
