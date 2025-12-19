@@ -2,17 +2,14 @@
 
 
 
-Kurrency is an Android app for \*\*real-time currency conversion\*\*.  
+Kurrency is an Android app for real-time currency conversion.  
 
-It demonstrates modern Android development practices including \*\*MVVM architecture\*\*, \*\*Jetpack components\*\*, and \*\*clean Kotlin code\*\*.  
-
-
-
----
+It demonstrates modern Android development practices including MVVM architecture, Jetpack components, and clean Kotlin code.  
 
 
 
-\## 🚀 Features
+
+\## Features
 
 \- Real-time currency conversion using ExchangeRate API
 
@@ -30,7 +27,7 @@ It demonstrates modern Android development practices including \*\*MVVM architec
 
 
 
-\## 🛠 Tech Stack
+\## Tech Stack
 
 \- \*\*Language:\*\* Kotlin  
 
@@ -48,11 +45,7 @@ It demonstrates modern Android development practices including \*\*MVVM architec
 
 
 
----
-
-
-
-\## 📂 Project Structure
+\## Project Structure
 
 
 
@@ -99,4 +92,5 @@ Kurrency
 └── scripts
 
 
-
+##Author
+-Nithillah Balaji
